@@ -10,5 +10,15 @@ class Test
 
     String str = br.readLine();
     int elm = Integer.parseInt(str);
+
+    int[] sub = new int[elm];
+
+    for(int i = 0; i < elm; i++){
+      do{
+        System.out.print("‹³‰È" + (i + 1) + "‚Ì“_”‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+        str = br.readLine();
+        sub[i] = Integer.parseInt(str);
+      } while(sub[i] < 0 || sub[i] > 100);
+    }
   }
 }
