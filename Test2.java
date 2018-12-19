@@ -4,6 +4,12 @@ class User
 {
   private String name;
   public int[] score;
+
+  public void add_name(String temporary)
+  {
+    name = temporary;
+    System.out.println(" " + name + "Ç≥ÇÒÇìoò^ÇµÇ‹ÇµÇΩÅB");
+  }
 }
 
 class Test2
@@ -25,6 +31,12 @@ class Test2
     int subject = Integer.parseInt(str);
     for(int i = 0; i < number; i++){
       users[i].score = new int[subject];
+    }
+
+    for(int i = 0; i < number; i++){
+      System.out.print(" ñºëOÇì¸óÕÇµÇƒÇ≠ÇæÇ≥Ç¢ÅB");
+      str = br.readLine();
+      users[i].add_name(str);
     }
   }
 }
