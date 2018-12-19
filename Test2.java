@@ -20,5 +20,11 @@ class Test2
     for(int i = 0; i < number; i++){
       users[i] = new User();
     }
+    System.out.print(" ‹³‰È”‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B");
+    str = br.readLine();
+    int subject = Integer.parseInt(str);
+    for(int i = 0; i < number; i++){
+      users[i].score = new int[subject];
+    }
   }
 }
