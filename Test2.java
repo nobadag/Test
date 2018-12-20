@@ -14,9 +14,21 @@ class User
   {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    System.out.print(" " + (count + 1) + "人目の名前を入力してください。");
+    System.out.print("\n " + (count + 1) + "人目の名前を入力してください。");
     name = br.readLine();
-    System.out.println(" " + name + "さんを登録しました。\n");
+    System.out.println(" " + name + "さんを登録しました。");
+  }
+
+  public void add_score(int subject) throws IOException
+  {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    for(int i = 0; i < subject; i++){
+      System.out.print(" " + name + "さんの教科" + (i + 1) + "の点数を入力してください。");
+      String str = br.readLine();
+      this.score[i] = Integer.parseInt(str);
+    }
+    System.out.println();
   }
 }
 
@@ -26,7 +38,7 @@ class Test2
   {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    System.out.print(" 人数を入力してください。");
+    System.out.print(" \n人数を入力してください。");
     String str = br.readLine();
     int number = Integer.parseInt(str);
     System.out.print(" 教科数を入力してください。");
@@ -41,6 +53,9 @@ class Test2
 
     for(int i = 0; i < number; i++){
       users[i].add_name(i);
+    }
+    for(int i = 0; i < number; i++){
+      users[i].add_score(subject);
     }
   }
 }
