@@ -4,6 +4,8 @@ class User
 {
   private String name;
   private int[] score;
+  private int average;
+  private int total;
 
   public User(int subject)
   {
@@ -26,9 +28,12 @@ class User
     for(int i = 0; i < subject; i++){
       System.out.print(" " + name + "さんの教科" + (i + 1) + "の点数を入力してください。");
       String str = br.readLine();
-      this.score[i] = Integer.parseInt(str);
+      score[i] = Integer.parseInt(str);
+      total += score[i];
     }
-    System.out.println();
+    average = total / subject;
+    System.out.println("\n 合計点は" + total + "点です。");
+    System.out.println(" 平均点は" + average + "点です。");
   }
 }
 
