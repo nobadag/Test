@@ -24,7 +24,8 @@ class User
   public void add_score(int subject) throws IOException
   {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
+    
+    System.out.println();
     for(int i = 0; i < subject; i++){
       System.out.print(" " + name + "さんの教科" + (i + 1) + "の点数を入力してください。");
       String str = br.readLine();
@@ -43,7 +44,7 @@ class Test2
   {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    System.out.print(" \n人数を入力してください。");
+    System.out.print("\n 人数を入力してください。");
     String str = br.readLine();
     int number = Integer.parseInt(str);
     System.out.print(" 教科数を入力してください。");
