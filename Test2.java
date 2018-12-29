@@ -35,7 +35,7 @@ class User
     }
     average = (double)total / (double)subject;
     System.out.println("\n 合計点は" + total + "点です。");
-    System.out.println(" 平均点は" + average + "点です。");
+    System.out.println(" 平均点は" + String.format("%.1f",average) + "点です。");
   }
 }
 
