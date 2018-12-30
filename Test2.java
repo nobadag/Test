@@ -74,10 +74,22 @@ class Test2 {
         System.out.print(" 人数を入力してください。");
         String str = br.readLine();
         number = Integer.parseInt(str);
+        if (number <= 0) {
+          IOException e = new IOException();
+          throw e;
+        }
+      } catch (IOException e) {
+        System.out.println(" 正しい値ではありません。");
+        retry = 1;
+      }
+    } while (retry == 1);
+    do {
+      retry = 0;
+      try {
         System.out.print(" 教科数を入力してください。");
         str = br.readLine();
         subject = Integer.parseInt(str);
-        if (number <= 0 || subject <= 0) {
+        if (subject <= 0) {
           IOException e = new IOException();
           throw e;
         }
