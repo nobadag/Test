@@ -65,6 +65,7 @@ class Test2 {
     int i;
     int j;
     int retry = 0;
+    String str;
 
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -72,7 +73,7 @@ class Test2 {
       retry = 0;
       try {
         System.out.print(" l”‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B");
-        String str = br.readLine();
+        str = br.readLine();
         number = Integer.parseInt(str);
         if (number <= 0) {
           IOException e = new IOException();
