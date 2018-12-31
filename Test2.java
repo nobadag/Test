@@ -2,8 +2,8 @@ import java.io.*;
 
 class User {
   public String name;
-  private int[] score;
-  private double average;
+  public int[] score;
+  public double average;
   public int total;
   public int rank;
 
@@ -134,6 +134,20 @@ class Test2 {
           System.out.println(" " + (users[j].rank + 1) + "位は、" + users[j].name + "さんです。 ");
         }
       }
+    }
+    try {
+      PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("scores.csv")));
+      for (i = 0; i < number; i++) {
+        pw.print(users[i].name + ",");
+        for (j = 0; j < subject; j++) {
+          pw.print(users[i].score[j] + ",");
+        }
+        pw.println();
+      }
+      pw.close();
+      System.out.println(" ファイルに書き出しました。");
+    } catch (IOException ie) {
+      System.out.println(" ファイルに書き出せませんでした。");
     }
   }
 }
